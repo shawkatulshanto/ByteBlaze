@@ -1,4 +1,5 @@
 import { useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [theme, setTheme]= useState('light')
@@ -25,8 +26,8 @@ document.querySelector('html'). setAttribute('data-theme', localTheme)
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
-            <li className="font-bold"><a>Home</a></li>
-            <li className="font-bold text-primary"><a>Blogs</a></li>
+            <Link to='/' className="font-bold">Home</Link>
+            <Link to='/Blogs' className="font-bold text-primary"><a>Blogs</a></Link>
             <li className="font-bold"><a>BookMarks</a></li>
            
           </ul>

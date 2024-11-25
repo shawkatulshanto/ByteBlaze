@@ -9,10 +9,11 @@ function App() {
 
   return (
     <>
+     <Home></Home>
     <Bookmarks></Bookmarks>
     <Blogs></Blogs>
    
-    <Home></Home>
+   
      
     </>
   )
