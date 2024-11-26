@@ -1,37 +1,42 @@
 
-import { createRoot } from 'react-dom/client'
+import  ReactDom from 'React-dom/client'
+import React from 'react'
 import './index.css'
 
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 
 import Blogs from './pages/Blogs.jsx'
 import Bookmarks from './pages/Bookmarks.jsx'
-import Mainlayout from './layout/Mainlayout.jsx'
+import Home from './pages/home.jsx'
+import MainLayout from './layout/mainlayout.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Mainlayout/>,
+    element: <MainLayout/>,
     children: [
       {
-       path: '/',
-       element: <Home/>,
+        path: '/',
+       element: <Home></Home>
+
       },
       {
-       path: '/Blogs',
-       element: <Blogs/>,
+        path: '/Blogs',
+       element: <Blogs></Blogs>
+
       },
       {
-       path: '/Bookmarks',
-       element: <Bookmarks/>,
+        path: '/Bookmarks',
+       element: <Bookmarks></Bookmarks>
+
       },
     ],
   },
  
 ])
 
-createRoot(document.getElementById('root')).render(
+ReactDom.createRoot(document.getElementById('root')).render(
 
    <RouterProvider router={router}/>
   
